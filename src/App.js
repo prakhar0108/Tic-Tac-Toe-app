@@ -126,7 +126,6 @@ export default function App() {
 
     setStyleCell(s);
   };
-  // winner !== '' && win();
 
   const clickHandler = (value) => {
     winner !== "" && alert(`Game is Over,${text}, Click Play Again button `);
