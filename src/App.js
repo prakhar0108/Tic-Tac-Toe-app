@@ -134,7 +134,7 @@ export default function App() {
       alert("Match Tied, Click Play Again button");
     if (foo[value] === "" && winner === "") {
       setCount(count + 1);
-      if (count % 2 == 0) {
+      if (count % 2 === 0) {
         crossArray.push(value);
         setText("O's turns -");
         setCrossArray(crossArray);
@@ -157,7 +157,7 @@ export default function App() {
         } else if (value === 9) {
           setFoo({ ...foo, 9: "X" });
         }
-      } else if (count % 2 != 0) {
+      } else if (count % 2 !== 0) {
         zeroArray.push(value);
         setText("X's turns -");
         setZeroArray(zeroArray);
@@ -201,7 +201,6 @@ export default function App() {
     }
     let flag1;
     if (crossArray.length > 3) {
-      let index;
       for (let i = 0; i < match.length; i++) {
         let s = match[i];
 
@@ -210,13 +209,12 @@ export default function App() {
           let n = parseInt(arr[j]);
           if (crossArray.includes(n)) {
             flag1 = true;
-            index = arr[j];
           } else {
             flag1 = false;
             break;
           }
         }
-        if (flag1 == true) {
+        if (flag1 === true) {
           setWinner(s);
           break;
         }
@@ -240,7 +238,7 @@ export default function App() {
             break;
           }
         }
-        if (flag2 == true) {
+        if (flag2 === true) {
           setWinner(s);
           break;
         }
