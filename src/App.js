@@ -252,7 +252,14 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
       <h1>Tic Tac Toe...</h1>
 
       {buttonFlag && (
@@ -262,28 +269,47 @@ export default function App() {
       )}
       <p>{text}</p>
       <div>
-        <table style={{ border: "2px solid black" }}>
+        <table
+          style={{
+            border: "2px solid black",
+            height: "400px",
+            width: "400px",
+            textAlign: "center",
+          }}
+        >
           <tr>
             <td
               onClick={() => clickHandler(1)}
               value={1}
               style={styleCell.getStyle1}
             >
-              <input style={{ width: "65%" }} disabled value={foo[1]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[1]}
+              />
             </td>
             <td
               onClick={() => clickHandler(2)}
               value={2}
               style={styleCell.getStyle2}
             >
-              <input style={{ width: "65%" }} disabled value={foo[2]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[2]}
+              />
             </td>
             <td
               onClick={() => clickHandler(3)}
               value={3}
               style={styleCell.getStyle3}
             >
-              <input style={{ width: "65%" }} disabled value={foo[3]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[3]}
+              />
             </td>
           </tr>
           <tr>
@@ -292,21 +318,33 @@ export default function App() {
               value={4}
               style={styleCell.getStyle4}
             >
-              <input style={{ width: "65%" }} disabled value={foo[4]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[4]}
+              />
             </td>
             <td
               onClick={() => clickHandler(5)}
               value={5}
               style={styleCell.getStyle5}
             >
-              <input style={{ width: "65%" }} disabled value={foo[5]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[5]}
+              />
             </td>
             <td
               onClick={() => clickHandler(6)}
               value={6}
               style={styleCell.getStyle6}
             >
-              <input style={{ width: "65%" }} disabled value={foo[6]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[6]}
+              />
             </td>
           </tr>
           <tr>
@@ -315,21 +353,33 @@ export default function App() {
               value={7}
               style={styleCell.getStyle7}
             >
-              <input style={{ width: "65%" }} disabled value={foo[7]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[7]}
+              />
             </td>
             <td
               onClick={() => clickHandler(8)}
               value={8}
               style={styleCell.getStyle8}
             >
-              <input style={{ width: "65%" }} disabled value={foo[8]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[8]}
+              />
             </td>
             <td
               onClick={() => clickHandler(9)}
               value={9}
               style={styleCell.getStyle9}
             >
-              <input style={{ width: "65%" }} disabled value={foo[9]} />
+              <input
+                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                disabled
+                value={foo[9]}
+              />
             </td>
           </tr>
         </table>
