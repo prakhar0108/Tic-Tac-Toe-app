@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 export default function App() {
@@ -9,6 +9,8 @@ export default function App() {
   const [count, setCount] = useState(0);
 
   const [buttonFlag, setButtonFlag] = useState(false);
+
+  const [winFlag, setWinFlag] = useState(false);
   const [text, setText] = useState("X's turns -");
   const [winner, setWinner] = useState("");
   const styleObj = {
@@ -53,28 +55,19 @@ export default function App() {
     setZeroArray([]);
     setCrossArray([]);
     setButtonFlag(false);
+    setWinFlag(false);
     setText("X's turns -");
     setCount(0);
     setFoo(obj);
     setWinner("");
     setStyleCell(styleObj);
   };
-
-  useEffect(() => {
-    win();
-  }, [buttonFlag]);
-
-  useEffect(() => {
-    count === 9 && winner === "" && setStyleCell(styleObj2);
-    count === 9 && winner === "" && setButtonFlag(true);
-    count === 9 && winner === "" && setText("Match Tied");
-  }, [count]);
-
-  const win = () => {
+  let s = styleCell;
+  if (winFlag === true) {
     const arr = winner.split("");
     const arr2 = arr.map((ele) => parseInt(ele));
 
-    let s = styleCell;
+    // s = styleCell;
     for (let i = 0; i < arr2.length; i++) {
       if (arr2[i] === 1) {
         s = {
@@ -123,9 +116,15 @@ export default function App() {
         };
       }
     }
-
     setStyleCell(s);
-  };
+    setWinFlag(false);
+  }
+
+  if (count === 9 && buttonFlag === false) {
+    count === 9 && winner === "" && setStyleCell(styleObj2);
+    count === 9 && winner === "" && setButtonFlag(true);
+    count === 9 && winner === "" && setText("Match Tied");
+  }
 
   const clickHandler = (value) => {
     winner !== "" && alert(`Game is Over,${text}, Click Play Again button `);
@@ -190,6 +189,7 @@ export default function App() {
       match.includes(a) && setText("X is the Winner");
       match.includes(a) && setButtonFlag(true);
       match.includes(a) && setWinner(a);
+      match.includes(a) && setWinFlag(true);
     }
 
     if (zeroArray.length === 3) {
@@ -198,6 +198,7 @@ export default function App() {
       match.includes(b) && setText("O is the Winner");
       match.includes(b) && setButtonFlag(true);
       match.includes(b) && setWinner(b);
+      match.includes(b) && setWinFlag(true);
     }
     let flag1;
     if (crossArray.length > 3) {
@@ -222,6 +223,7 @@ export default function App() {
 
       flag1 && setText("X is the Winner");
       flag1 && setButtonFlag(true);
+      flag1 && setWinFlag(true);
     }
 
     let flag2;
@@ -245,6 +247,7 @@ export default function App() {
       }
       flag2 && setText("O is the Winner");
       flag2 && setButtonFlag(true);
+      flag2 && setWinFlag(true);
     }
   };
 
