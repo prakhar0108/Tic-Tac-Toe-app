@@ -284,7 +284,12 @@ export default function App() {
               style={styleCell.getStyle1}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[1]}
               />
@@ -295,7 +300,12 @@ export default function App() {
               style={styleCell.getStyle2}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[2]}
               />
@@ -306,7 +316,12 @@ export default function App() {
               style={styleCell.getStyle3}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[3]}
               />
@@ -319,7 +334,12 @@ export default function App() {
               style={styleCell.getStyle4}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[4]}
               />
@@ -330,7 +350,12 @@ export default function App() {
               style={styleCell.getStyle5}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[5]}
               />
@@ -341,7 +366,12 @@ export default function App() {
               style={styleCell.getStyle6}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[6]}
               />
@@ -354,7 +384,12 @@ export default function App() {
               style={styleCell.getStyle7}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[7]}
               />
@@ -365,7 +400,12 @@ export default function App() {
               style={styleCell.getStyle8}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[8]}
               />
@@ -376,7 +416,12 @@ export default function App() {
               style={styleCell.getStyle9}
             >
               <input
-                style={{ width: "65%", height: "70%", textAlign: "center" }}
+                style={{
+                  width: "65%",
+                  height: "70%",
+                  textAlign: "center",
+                  fontSize: "25px",
+                }}
                 disabled
                 value={foo[9]}
               />
