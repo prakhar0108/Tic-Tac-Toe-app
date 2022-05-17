@@ -272,8 +272,8 @@ export default function App() {
         <table
           style={{
             border: "2px solid black",
-            height: "400px",
-            width: "400px",
+            height: "300px",
+            width: "300px",
             textAlign: "center",
           }}
         >
